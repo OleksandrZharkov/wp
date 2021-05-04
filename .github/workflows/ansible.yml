@@ -1,13 +1,9 @@
-name: 'Ansible'
+name: wp
 
 on:
-  workflow_run:
-    workflows:
-      - Terraform
-    types: 
-      - completed
+  push:
     branches:
-      - main
+      - 'main'
     
 jobs:
   mysql:
