@@ -13,6 +13,3 @@
         group: ubuntu
         mode: u=rw,g=r,o=r
     
-    - name: run the service defined in my_project's docker-compose.yml
-      docker_compose:
-      project_src: /opt/docker-compose/
