@@ -12,4 +12,3 @@
         owner: ubuntu
         group: ubuntu
         mode: u=rw,g=r,o=r
-    
