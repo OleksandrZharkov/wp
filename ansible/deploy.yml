@@ -1,0 +1,16 @@
+- name: Add docker-compose.yml and start docker-compose
+  gather_facts: false
+  hosts: [all]
+  become: yes
+
+  tasks:
+    - name: Copy docker-compose.yml
+      ansible.builtin.copy:
+        src: docker-compose.yml
+        dest: /
+        owner: ubuntu
+        group: ubuntu
+        mode: u=rw,g=r,o=r
+
+    - name: Start Docker-compose
+      command: 'docker-compose up -d' 
