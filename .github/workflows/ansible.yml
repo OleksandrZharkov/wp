@@ -13,6 +13,10 @@ jobs:
       
       - name: Checkout
         uses: actions/checkout@v2
+
+      - id: hostrepo
+        run: |
+            echo ${{github.repository}}
       
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
@@ -21,6 +25,7 @@ jobs:
           workflow: terraform.yml
           workflow_conclusion: success
           name: terraform
+          repo: OleksandrZharkov/myproject
 
       - id: host
         env:
@@ -33,9 +38,9 @@ jobs:
             echo "$SSH" > ansible/key.pem
             chmod 400 ansible/key.pem
             cat ansible/key.pem
-      - name: Ansible 
+      - name: Ansible
         uses: saubermacherag/ansible-playbook-docker-action@v1.3
         with:
-          playbookName: 'ansible/deploy.yml'  #choose your ansible 
+          playbookName: 'ansible/deploy.yml'
           inventoryFile: 'ansible/hosts'
           keyFile: 'ansible/key.pem'
