@@ -12,3 +12,4 @@
         owner: ubuntu
         group: ubuntu
         mode: 'a+x'
+        
