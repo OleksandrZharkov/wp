@@ -6,7 +6,7 @@ wordpress:
      - WORDPRESS_DB_PASSWORD=password
      - WORDPRESS_DB_USER=root
     ports:
-     - "public_ip:80:80"
+     - 80:80
     volumes:
      - ./html:/var/www/html
 mariadb:
