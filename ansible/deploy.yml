@@ -8,7 +8,7 @@
     - name:  Copy
       copy:
         src: docker-compose.yml
-        dest: /opt/wp
+        dest: /usr/local/bin/docker-compose
         owner: ubuntu
         group: ubuntu
         mode: u=rw,g=r,o=r
