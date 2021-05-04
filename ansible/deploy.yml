@@ -7,7 +7,7 @@
     
     - name:  Copy
       copy:
-        src: /docker-compose.yml
+        src: docker-compose.yml
         dest: /opt/wp
         owner: alex
         group: root
