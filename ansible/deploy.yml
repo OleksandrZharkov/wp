@@ -12,6 +12,3 @@
         owner: ubuntu
         group: ubuntu
         mode: 'a+x'
-
-- name: Start Docker-compose
-      command: 'docker-compose up -d' 
