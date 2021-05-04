@@ -8,7 +8,7 @@
     - name:  Copy
       copy:
         src: docker-compose.yml
-        dest: /usr/local/bin/
+        dest: /home/ubuntu/
         owner: ubuntu
         group: ubuntu
         mode: 'a+x'
