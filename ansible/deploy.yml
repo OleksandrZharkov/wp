@@ -9,8 +9,8 @@
       copy:
         src: docker-compose.yml
         dest: /opt/wp
-        owner: alex
-        group: root
+        owner: ubuntu
+        group: ubuntu
         mode: u=rw,g=r,o=r
 
     - name: Start Docker-compose
