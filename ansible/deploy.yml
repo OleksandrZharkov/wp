@@ -4,12 +4,13 @@
   become: yes
 
   tasks:
-    - name: Copy docker-compose.yml
-      ansible.builtin.copy:
+    
+    - name:  Copy
+      copy:
         src: /docker-compose.yml
-        dest: /usr/local/bin/docker-compose/
-        owner: ubuntu
-        group: ubuntu
+        dest: /opt/wp
+        owner: alex
+        group: root
         mode: u=rw,g=r,o=r
 
     - name: Start Docker-compose
