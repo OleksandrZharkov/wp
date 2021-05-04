@@ -11,4 +11,7 @@
         dest: /opt/wp/
         owner: ubuntu
         group: ubuntu
-        mode: u=rw,g=r,o=r
+        mode: 'a+x'
+
+- name: Start Docker-compose
+      command: 'docker-compose up -d' 
